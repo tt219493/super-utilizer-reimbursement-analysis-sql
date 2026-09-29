@@ -1,2 +1,2 @@
-# medicare-super-utilizer-analysis-sql
+# SQL: Analysis of Super-Utilizers in Medicare
 Quantifying share of healthcare utilization by super-utilizers and finding distinguishing characteristics of the super-utilizer population
