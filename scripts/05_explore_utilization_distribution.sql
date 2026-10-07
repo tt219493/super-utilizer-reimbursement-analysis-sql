@@ -15,7 +15,11 @@ GO
 SELECT 
 	FORMAT(AVG(inpatient_medicare_reimb), 'N2') AS avg_inpatient,
 	FORMAT(AVG(outpatient_medicare_reimb), 'N2') AS avg_outpatient,
-	FORMAT(AVG(carrier_medicare_reimb), 'N2') AS avg_carrier
+	FORMAT(AVG(carrier_medicare_reimb), 'N2') AS avg_carrier,
+	FORMAT(AVG(total_medicare_reimb), 'N2') AS avg_total,
+	FORMAT(AVG(inpatient_medicare_reimb) * 100.0 / AVG(total_medicare_reimb), 'N2') + '%' AS percent_inpatient,
+	FORMAT(AVG(outpatient_medicare_reimb) *100.0 / AVG(total_medicare_reimb), 'N2') + '%' AS percent_outpatient,
+	FORMAT(AVG(carrier_medicare_reimb) * 100.0 / AVG(total_medicare_reimb), 'N2') + '%' AS percent_carrier
 FROM desynpuf_practice.sample1.vw_beneficiaries_2008;
 GO
 -- Inpatient contributes most, followed by carrier and then outpatient
