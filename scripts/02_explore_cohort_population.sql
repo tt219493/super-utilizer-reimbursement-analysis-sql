@@ -2,12 +2,22 @@
 ===========================
 Exploring and Choosing Cohort for Analysis 
 ===========================
-
 Script Purpose: 
-	Exploring the population by months of Part A & Part B Medicare coverage
-	Choosing the cohort as having coverage for the whole year (12 months for both Part A & Part B)
-	Comparing distribution of total Medicare reimbursements / utilization for population inside and out of cohort
-	Additionally, looking at dates of death within cohort and exploring distribution
+	- Doing initial exploration on table to choose cohort for super-utilizer analysis
+	- Exploring the population by months of Part A & Part B Medicare coverage
+	- Choosing the cohort as having coverage for the whole year (12 months for both Part A & Part B)
+	- Comparing distribution of total Medicare reimbursements / utilization for population inside and out of cohort
+	- Comparing dates of death within cohort and exploring distribution
+
+Methodology and Functions Used:
+	- COUNT(), SUM(COUNT() OVER ()) for counts and percentages
+	- SUM(CASE WHEN ... THEN 1 ELSE 0 END) for counts that match a condition
+	- CTE Table for necessary columns and pre-processing before GROUP BY aggregation
+	- CROSS APPLY (...) to create new columns and allow for newly made columns to be referenced in the same query
+	- PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY ) OVER () to get median
+	- MIN(), MAX(), AVG(), STDEV() for information about the distribution
+	- DATETRUNC() to work with the months
+	- COALESCE() to replace NULL values
 */
 
 USE desynpuf_practice;
