@@ -2,10 +2,15 @@
 ===========================
 Explore Percent Utilization 
 ===========================
-
 Script Purpose: 
-	Using the cumulative reimbursement table, explore how much utilization is account for by the top utilizers.
-	A function will be created to allow for any percentile to be inputted.
+	- Creates function 'percent_utilization' (which is dropped at the end of the script)
+	- Takes parameter @percentile FLOAT which is the population percentile to look at
+	- Returns table with 'percent_utilization' and 'percentile_population' 
+	- Show how much of total utilization is accounted for by the percentile inputted
+
+Example:
+	SELECT * FROM sample1.percent_utilization(90.0)
+	- Returns the percent utilization accounted for by the 90th percentile of utilizers (top 10% of utilizers)
 */
 
 
