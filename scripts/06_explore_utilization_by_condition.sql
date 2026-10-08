@@ -2,10 +2,18 @@
 ===========================
 Exploring Reimbursements & Utilization by Condition and Number of Conditions 
 ===========================
-
 Script Purpose: 
-	Grouping by each condition to compare utilizations by beneficiaries with and without the condition.
-	Additionally, grouping by number of conditions to once again compare utilization against number of conditions.
+	- Grouping by number of conditions to compare reimbursements / utilization for each group
+	- For each chronic condition (out of the 11 listed in the dataset), 
+	  group by condition to compare reimbursements / utilization for those with condition vs without condition
+
+Methodology and Functions Used:
+	- CTEs for selecting necessary information before GROUP BY aggregation
+	- PERCENTILE_CONT() for median
+	- MIN(), AVG(), MAX() for distribution information
+	- LAG() to find the ratio of medians between groups
+	- NULLIF() to replace divide-by-zero with NULL  
+	- COALESCE() to replace NULL values from NULLIF()
 */
 
 USE desynpuf_practice;
