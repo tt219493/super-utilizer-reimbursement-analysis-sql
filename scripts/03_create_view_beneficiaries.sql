@@ -4,9 +4,15 @@ Create Beneficiary View from Table
 ===========================
 
 Script Purpose: 
-	Creates a view that filters out for cohort population and only includes relevant columns for super-utilizer analysis.
-	Renames columns to more understandable names and changes some data types for efficiency.
-	Additionally, adds new columns for easier analysis later.
+	- Creates a view that filters for cohort population and only includes relevant columns for super-utilizer analysis.
+	- Renames columns to more understandable names and changes some data types for better efficiency and usability.
+	- Adds new columns for simpler analysis in the future.
+
+Methodology and Functions Used:
+	- CAST() to change CHAR into TINYINT for better usability.
+	- % or Modulo operator to change code numbers for better usability.
+	- FLOOR() and YEAR() to get age categories for every decade.
+	- CROSS APPLY (...) twice to create new columns and once again to reference those new columns for additional columns.
 */
 
 USE desynpuf_practice;
