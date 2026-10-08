@@ -2,13 +2,13 @@
 ===========================
 Create Lookup / Definition Tables
 ===========================
-
 Script Purpose: 
-		Create schema called 'lookups' and add lookup tables to convert codes into their defined descriptions.
-		These tables will include both the original codes as well as the codes that were changed in the newly created view.
+	- Create schema called 'lookups' and create lookup tables to convert codes into their defined descriptions by using INNER JOIN.
+	- Tables will include both original codes and newly changed codes used in the views
+	- Primary Key will be on the newly changed codes
 
-		Code definitions as defined by 
-		https://www.cms.gov/files/document/de-10-codebook.pdf-0
+	- Code definitions as defined by 
+	https://www.cms.gov/files/document/de-10-codebook.pdf-0
 */
 
 USE desynpuf_practice;
