@@ -2,14 +2,21 @@
 ===========================
 Create Cumulative Table and Create New View
 ===========================
-
 Script Purpose: 
-	Creates table with cumulative reimbursements for visualization with Lorenz curve 
-	and to assign percentiles to all beneficiaries, according to their reimbursements / utilization.
-	This table will also show concentration of reimbursements in a small proportion of the population (super-utilizers).
+	- Creates a new table called 'beneficiaries_2008_cumulative'.
+	- Each beneficiary will be assigned a row number in order of ascending total reimbursements.
+	- A cumulative sum of reimbursements will be done over this order.
+	- Percentiles will be assigned based off these row numbers and the cumulative sum.
 
 	Super-utilizers will be defined in this analysis as the top 10% of population in reimbursements.
-	A new view will be re-created with a new column marking this assignment as super-utilizer or general population (other 90%)
+	- A new view will be created adding a column marking this assignment as super-utilizer or general population (other 90%)
+
+Methodology and Functions Used:
+	- Chained CTEs to apply new functions based off previous CTE 
+	- ROW_NUMBER() OVER () to assign a unique row number and ordering to the table, based off total reimbursements
+	- SUM() OVER () to have a cumulative sum of reimbursements over the assigned ordering
+	- ... / MAX() OVER () to get percentiles for each row
+	- CASE WHEN ... to mark whether a beneficiary is a super-utilizer or general population
 */
 
 USE desynpuf_practice;
