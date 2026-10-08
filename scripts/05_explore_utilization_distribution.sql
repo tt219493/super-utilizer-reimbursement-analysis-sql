@@ -2,9 +2,9 @@
 ===========================
 Explore Distribution of Reimbursements 
 ===========================
-
 Script Purpose: 
-	Using the newly created view, find the percentiles of total medicare reimbursements to get a distribution.
+	- Show breakdown of reimbursements across the categories 'Inpatient', 'Outpatient', and 'Carrier'
+	- Using the newly created view, find the percentiles of total medicare reimbursements to get a distribution.
 
 */
 
@@ -18,7 +18,7 @@ SELECT
 	FORMAT(AVG(carrier_medicare_reimb), 'N2') AS avg_carrier,
 	FORMAT(AVG(total_medicare_reimb), 'N2') AS avg_total,
 	FORMAT(AVG(inpatient_medicare_reimb) * 100.0 / AVG(total_medicare_reimb), 'N2') + '%' AS percent_inpatient,
-	FORMAT(AVG(outpatient_medicare_reimb) *100.0 / AVG(total_medicare_reimb), 'N2') + '%' AS percent_outpatient,
+	FORMAT(AVG(outpatient_medicare_reimb) * 100.0 / AVG(total_medicare_reimb), 'N2') + '%' AS percent_outpatient,
 	FORMAT(AVG(carrier_medicare_reimb) * 100.0 / AVG(total_medicare_reimb), 'N2') + '%' AS percent_carrier
 FROM desynpuf_practice.sample1.vw_beneficiaries_2008;
 GO
