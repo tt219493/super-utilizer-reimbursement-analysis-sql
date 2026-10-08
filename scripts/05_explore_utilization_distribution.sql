@@ -4,8 +4,13 @@ Explore Distribution of Reimbursements
 ===========================
 Script Purpose: 
 	- Show breakdown of reimbursements across the categories 'Inpatient', 'Outpatient', and 'Carrier'
-	- Using the newly created view, find the percentiles of total medicare reimbursements to get a distribution.
+	- Find percentiles of total medicare reimbursements as well as min, avg, and max to show distribution across the cohort.
 
+Methodology and Functions Used:
+	- CTE for pre-processing before aggregation functions
+	- PERCENTILE_CONT(...) WITHIN GROUP (ORDER BY ...) OVER () to get values at each percentile
+		- Used in CTE since it is not an aggregation function
+	- MIN(), AVG(), MAX() to get distribution
 */
 
 USE desynpuf_practice;
