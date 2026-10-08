@@ -2,23 +2,23 @@
 ===========================
 Create Beneficiary Table and Load Data into Table
 ===========================
-
 Script Purpose: 
 	DDL:
-	Creates table called 'beneficiaries_2008' under the schema 'sample1'. 
-	Table is dropped and recreated if it already exists.
+	- Creates table called 'beneficiaries_2008' under the schema 'sample1'. 
+	- Table is dropped and recreated if it already exists.
+	- Table schema initialized as described in the documentation
 
-	Non-clustered primary key index created on ID.
-	Clustered columnstore index will be created for this table.
+	- Non-clustered primary key index created on beneficiary ID.
+	- Clustered columnstore index will be created for this table.
 	
 	DML:
-	Loads table data from local file describing Medicare beneficiaries.
+	- Uses `BULK INSERT` to load table data from local CSV file describing Medicare beneficiaries.
 	
 Data Source:
-	Using sample 1 from publicly available synthetic Medicare dataset provided by CMS called DE-SynPUF
+	- Sample 1 from publicly available synthetic Medicare dataset provided by CMS called DE-SynPUF
 	https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-claims-synthetic-public-use-files/cms-2008-2010-data-entrepreneurs-synthetic-public-use-file-de-synpuf/de10-sample-1
 
-	Column descriptions and data types are provided by CMS using this documentation:
+	- Column descriptions and data types are provided by CMS using this documentation:
 	https://www.cms.gov/files/document/de-10-codebook.pdf-0
 
 */
