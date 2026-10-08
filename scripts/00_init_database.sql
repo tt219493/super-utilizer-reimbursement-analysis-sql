@@ -3,9 +3,9 @@
 Create Database and Schema
 ===========================
 Purpose: 
-	Creates database named 'desynpuf_practice' after checking if it exists.
-	If it already exists, drop database and recreate.
-	Adds schema 'sample1' to the new database.
+	- Creates database named 'desynpuf_practice' after checking if it exists.
+	- If it already exists, drop database and recreate.
+	- Adds schema 'sample1' to the new database.
 
 Warning: 
 	Running script will drop all data in database named 'desynpuf_practice' if it exists. 
