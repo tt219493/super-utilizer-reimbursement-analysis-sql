@@ -3,7 +3,8 @@
 Create Beneficiary View from Table
 ===========================
 Script Purpose: 
-	- Creates a view that filters for cohort population and only includes relevant columns for super-utilizer analysis.
+	- Creates a view called 'vw_beneficiaries_2008'
+	- This view filters for cohort population and only includes relevant columns for super-utilizer analysis.
 	- Renames columns to more understandable names and changes some data types for better efficiency and usability.
 	- Adds new columns for simpler analysis in the future.
 
