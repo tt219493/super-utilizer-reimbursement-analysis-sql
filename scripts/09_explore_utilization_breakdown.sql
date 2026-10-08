@@ -2,10 +2,15 @@
 ===========================
 Explore Breakdown of Reimbursements 
 ===========================
-
 Script Purpose: 
-	Explore and compare the breakdown of reimbursements (whether inpatient, outpatient, or carrier) 
-	and compare breakdowns between super-utilizers (SU / top 10%) and the general population (GP / bottom 90%)
+	- Show breakdown of reimbursements across the categories 'Inpatient', 'Outpatient', and 'Carrier' 
+	  grouped by super-utilizers and general population.
+	- Compares how the breakdown changes between these two populations.
+
+Methodology and Functions:
+	- SUM() to get total reimbursements in each category.
+	- ... / SUM(total_medicare_reimb) to get percentage breakdown of each category.
+	- GROUP BY to compare between super-utilizers and general population.
 */
 
 
