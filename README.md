@@ -11,8 +11,7 @@ Analysis done using T-SQL in SQL Server and synthetic Medicare dataset.
 
 **Languages & Software:** T-SQL, SQL Server (2022)  
 **Dataset:** CMS Medicare Claims Synthetic Public Use Files:
-[Dataset](https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-claims-synthetic-public-use-files/cms-2008-2010-data-entrepreneurs-synthetic-public-use-file-de-synpuf/de10-sample-1),  
-[Codebook](https://www.cms.gov/files/document/de-10-codebook.pdf-0)
+[Dataset](https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-claims-synthetic-public-use-files/cms-2008-2010-data-entrepreneurs-synthetic-public-use-file-de-synpuf/de10-sample-1), [Codebook](https://www.cms.gov/files/document/de-10-codebook.pdf-0)
 
 **Steps:**
 - Select cohort & explore distribution of Medicare reimbursements.
