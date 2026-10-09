@@ -2,11 +2,16 @@
 ===========================
 Calculate Gini Coefficient 
 ===========================
-
 Script Purpose: 
-	Utilizes Riemann sums (with trapezoids) for each data point to approximate area under the Lorenz curve.
-	Uses this area to calculate Gini coefficient to show "inequality" among the distribution of utilization / reimbursements
+	- Calculates Gini coefficient from the cumulative table
+	- Utilizes Riemann sums (with trapezoids) for each data point to approximate area under the Lorenz curve.
+	- Uses this area to calculate Gini coefficient to show "inequality" among the distribution of utilization / reimbursements
 	(Usually used to measure economic inequality among populations such as countries but adapted here inequality among utilization / reimbursements)
+
+Methodology and Functions Used:
+	- LEAD() to find difference along population percentile and to find sum along reimbursement percetile
+	- CROSS APPLY to get area of trapezoid for each data point
+	- SUM() to add up all areas to get area under Lorenz curve
 */
 
 USE desynpuf_practice;
