@@ -7,6 +7,7 @@ Script Purpose:
 	- Each beneficiary will be assigned a row number in order of ascending total reimbursements.
 	- A cumulative sum of reimbursements will be done over this order.
 	- Percentiles will be assigned based off these row numbers and the cumulative sum.
+	- This table will be used for plotting the Lorenz curve to demonstrate concentration of utilization among the top.
 
 	Super-utilizers will be defined in this analysis as the top 10% of population in reimbursements.
 	- A new view will be created adding a column marking this assignment as super-utilizer or general population (other 90%)
