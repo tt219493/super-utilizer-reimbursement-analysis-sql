@@ -16,7 +16,7 @@ Function:
 
 Methodology and Functions Used:
 	- COUNT(), SUM(COUNT()) OVER () to get counts and percentages
-	- GROUP BY to group by number of conditions
+	- GROUP BY to group by age category
 	- INNER JOIN to join two tables created from count_of_age_category
 	- CROSS APPLY to calculate prevalence ratios and 95% confidence intervals for the joined table
 */
