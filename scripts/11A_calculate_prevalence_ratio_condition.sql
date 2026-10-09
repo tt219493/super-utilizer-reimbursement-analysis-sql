@@ -3,8 +3,22 @@
 Calculating prevalence ratio for each condition
 ===========================
 Script Purpose: 
-	Creates function to output table to compare prevalence of all conditions within the super-utilizer population (top 10% of reimbursements) vs the general population (bottom 90%).
-	Uses the prevalence to calculate prevalence ratio and calculates 95% confidence intervals for statistical significance between prevalences.
+	- Creates function to output table to compare prevalence of all conditions (which is dropped at the end of the script)
+	  within the super-utilizer population (top 10% of reimbursements) vs the general population (bottom 90%).
+	- Calculates prevalence ratio and 95% confidence intervals
+	  to see if the changes in prevalence is statistically significant.
+
+Function:
+	count_of_conditions (@is_super_utilizer INT = NULL)
+	- 0 = general population
+	- 1 = super-utilizers
+	- NULL or DEFAULT = full population
+
+Methodology and Functions Used:
+	- CTEs to get counts of all chronic conditions across the columns
+	- CROSS APPLY to 'unpivot' the counts so each row corresponds with a different condition
+	- INNER JOIN to join two tables created from count_of_conditions
+	- CROSS APPLY to calculate prevalence ratios and 95% confidence intervals for the joined table
 */
 
 USE desynpuf_practice;
