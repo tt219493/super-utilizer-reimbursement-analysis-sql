@@ -42,5 +42,5 @@ SELECT * FROM sample1.percent_utilization(95.0);
 SELECT * FROM sample1.percent_utilization(99.9);
 GO
 
-DROP FUNCTION IF EXISTS sample1.percent_reimb_accounted_for;
+DROP FUNCTION IF EXISTS sample1.percent_utilization;
 GO
