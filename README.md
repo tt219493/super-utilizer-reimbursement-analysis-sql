@@ -24,6 +24,9 @@ Analysis done using T-SQL in SQL Server and synthetic Medicare dataset.
 - The top 10% of utilizers account for 63.1% of total healthcare utilization.
 - The top 5% of utilizers account for 45.6% of total healthcare utilization.
 - The Gini coefficient is 0.757.
-- All chronic conditions explored are more prevalent in the super-utilizer population.
+- All chronic conditions explored are more prevalent in the super-utilizer population with statistical significance.
 - Highest prevalence is Ischemic Heart Disease at 91.96% of the super-utilizer population.
 - Highest increase in prevalence is Stroke/Transient Ischemic Attack at 5.671 times more prevalent in the super-utilizer population over the general population.
+- There is an increase in spending as number of conditions increase and the prevalence ratio increases as number of conditions increase as well.
+
+Results demonstrate that super-utilizers are an important issue to be addressed to reduce healthcare spending, especially since they are a small part of the entire Medicare population.  
