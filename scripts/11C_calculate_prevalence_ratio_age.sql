@@ -133,5 +133,5 @@ However, it appears as though conditions and number of conditions play more of a
 ---------
 */
 
-DROP FUNCTION IF EXISTS count_of_bene_age_category;
+DROP FUNCTION IF EXISTS count_of_age_category;
 DROP TABLE IF EXISTS #compare_prevalence;
