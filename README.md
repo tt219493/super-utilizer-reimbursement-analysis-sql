@@ -1,5 +1,5 @@
-# SQL: Analysis of Super-Utilizers in Medicare
-Quantifying share of healthcare utilization by super-utilizers and finding distinguishing characteristics of this population.
+# SQL: Analysis of Super-Utilizers in Medicare Using Reimbursements
+Quantifying share of healthcare utilization by super-utilizers using reimbursements and finding distinguishing characteristics of this population.
 
 Analysis done using T-SQL in SQL Server and synthetic Medicare dataset.
 
